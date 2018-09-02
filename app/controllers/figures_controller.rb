@@ -1,3 +1,4 @@
 class FiguresController < ApplicationController
-  # add controller methods
+  get '/new' do
+  end
 end
