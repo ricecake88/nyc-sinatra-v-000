@@ -12,9 +12,13 @@ Update Figure:<br/>
   <% end %>
   Create New Title:<br/>
   <input type="text" name="title[name]" id="new_title"><br/>
+  
+  <p>Landmarks
   <% Landmark.all.each do |l| %>
-    Landmarks:<input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=l.id%>" value="<%= l.id %>" <%= "checked" if @figure.landmarks.include?(l) %>><%= l.name %><br/>
-  <% end %>  
+    Landmarks:
+    <%= l.name %><input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=l.id%>" value="<%= l.id %>" <%= "checked" if @figure.landmarks.include?(l) %>><br/>
+  <% end %>
+  </p>
   
   <p>Create New Landmark:<br/>
   <input type="text" name="landmark[name]" id="new_landmark" value="<%=@figure.landmarks.first.name %>"><br/>
