@@ -9,7 +9,7 @@ Update Figure:<br/>
 
   Titles: <br/>
   <% Title.all.each do |t| %>
-    <%= t.name %><input type="checkbox" name="figure[title_ids][]"></input><br/>
+    <input type="checkbox" name="figure[title_ids][]"><%= t.name %></input><br/>
   <% end %>
 
 
