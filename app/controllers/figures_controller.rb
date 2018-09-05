@@ -11,7 +11,11 @@ class FiguresController < ApplicationController
 
   get '/figures/:id/edit' do
     @figure = Figure.find(params[:id])
-    erb :'/figures/edit'
+    if @figure.nil?
+      "Empty"
+    else
+      erb :'/figures/edit'
+    end
   end
   
   post '/figures' do
