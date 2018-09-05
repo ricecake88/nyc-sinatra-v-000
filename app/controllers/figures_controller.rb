@@ -10,8 +10,8 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id/edit' do
-    @figure = Figure.find(params[:id])
     binding.pry
+    @figure = Figure.find(params[:id])
     if @figure.nil?
       "Empty"
     else
