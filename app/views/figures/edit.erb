@@ -9,9 +9,8 @@ Update Figure:<br/>
 
   Titles: <br/>
   <% Title.all.each do |t| %>
-    <input type="checkbox" name="figure[title_ids][]" value="<%= t.id %>"><%= t.name %></input><br/>
+    <%= t.name %><input type="checkbox" name="figure[title_ids][]" id="title_<%= t.id %>" value="<%= t.id %>"<%= "checked" if @figure.titles.include?(t) %>><br/>
   <% end %>
-
 
 
   Create New Title:<br/>
