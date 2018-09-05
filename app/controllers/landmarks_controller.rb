@@ -4,10 +4,11 @@ class LandmarksController < ApplicationController
   end
   
   post '/landmarks' do
-    erb :'/landmarks/'
+    erb :'/landmarks'
   end
   
   get '/landmarks/:id' do
-    erb :'/landmarks/show
+    erb :'/landmarks/show'
   end
+  
 end
