@@ -3,7 +3,8 @@
 <% Landmark.all.each do |landmark| %>
   Name: <%= landmark.name %>
   Year Completed: <%= landmark.year_completed %>
-  Figure Related: <%= landmark.figure_id
+  <% figure = Figure.find(landmark.figure_id) %>
+  Figure Related: <%= figure.name %>
 <% end %>
 
 <a class="button" href="/figures">Figures</a>
