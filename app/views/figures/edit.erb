@@ -2,7 +2,7 @@ Update Figure:<br/>
 <form method="post" action="/figures/<%= @figure.id %>">
   <input name="method" type="_hidden" value="patch">
   <% Title.all.each do |t| %>
-    Title: <input type="checkbox" name="figure[title_ids][]" id="title_<%= t.id %>" value="<%= t.id %>" <%= "checked" if @figure.titles.include?(t) %> > <%= t.name %><br/>
+    Title: <input type="checkbox" name="figure[title_ids][]" id="title_<%= t.id %>" value="<%= t.id %>"<%="checked" if @figure.titles.include?(t) %>><%= t.name %><br/>
   <% end %>
 
 
