@@ -1,20 +1,16 @@
 class FiguresController < ApplicationController
-<<<<<<< HEAD
   
   get '/figures' do
     @figures = Figure.all
     erb :'/figures/index'
   end
   
-=======
->>>>>>> 429264406d61d3461d7d849b842e2c5b63859146
   get '/figures/new' do
     erb :'/figures/new'
   end
   
   post '/figures' do
     figure = Figure.create(params[:figure])
-<<<<<<< HEAD
     if !params[:title][:name].empty?
       title = Title.create(name: params[:title][:name])
       figure.titles << title
@@ -49,10 +45,5 @@ class FiguresController < ApplicationController
     end
     @figure.update
     redirect to "/figures/#{@figure.id}"
-=======
-    binding.pry
-    figure.title_ids << figure.title
-    erb :'/figures'
->>>>>>> 429264406d61d3461d7d849b842e2c5b63859146
   end
 end
