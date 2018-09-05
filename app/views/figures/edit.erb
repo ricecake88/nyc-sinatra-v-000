@@ -1,6 +1,6 @@
 Update Figure:<br/>
 <form method="post" action="/figures/<%= @figure.id %>">
-  <input name="method" type="_hidden" value="patch">
+  <input name="_method" type="hidden" id="hidden" value="patch">
   
   <p>
     Figure Name: <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>"><br/>
