@@ -10,9 +10,7 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id/edit' do
-    binding.pry
     @figure = Figure.find(params[:id])
-    @figure.update(params['figure'])
     erb :'/figures/edit'
   end
   
@@ -34,8 +32,6 @@ class FiguresController < ApplicationController
     @figure = Figure.find(params[:id])
     erb :'/figures/show'
   end
-  
-
   
   patch '/figures/:id' do
     @figure = Figure.find(params[:id])
