@@ -11,10 +11,6 @@ Update Figure:<br/>
     <%= t.name %><input type="checkbox" name="figure[title_ids][]" id="title_<%= t.id %>" value="<%= t.id %>"<%= "checked" if @figure.titles.include?(t) %>><br/>
   <% end %>
 
-  <p>Create New Landmark:<br/>
-  <input type="text" name="landmark[name]" id="new_landmark"><br/>
-  <input type="text" name="landmark[year]"><br/>
-  </p>
   
   <input type="submit" value="Edit Figure">
 </form>
