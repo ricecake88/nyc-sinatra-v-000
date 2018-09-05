@@ -8,6 +8,11 @@ class FiguresController < ApplicationController
   get '/figures/new' do
     erb :'/figures/new'
   end
+
+  get '/figures/:id/edit' do
+    @figure = Figure.find(params[:id])
+    erb :'/figures/edit'
+  end
   
   post '/figures' do
     figure = Figure.create(params[:figure])
